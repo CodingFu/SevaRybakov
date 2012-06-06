@@ -2,15 +2,16 @@ util = require 'util'
 fs = require 'fs'
 http = require 'http'
 
+
 responder = (req, res) ->
-  
+    
   # Doing some routing
   url = 
     switch req.url
-      when '/' then '/index.html'
+      when '/' then '/index.html' 
       else req.url 
   
-  # Guessing fileType
+  # Guessing Content-type
   head = {}
   head['Content-Type'] =
     if /.*\.html/.test url
@@ -31,6 +32,9 @@ responder = (req, res) ->
     res.writeHead 404, 'Content-Type' : 'text/plain'
     body = 'Oops... 404'
   res.end body
+
+
+################# Launching the server ####################
 
 server = http.createServer(responder)
              .listen port = process.env.PORT || 3000
