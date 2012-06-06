@@ -1,17 +1,17 @@
 This is my personal blog.
 =========================
 
-Technologies:
--------------
+### Technologies:
 
-### FrontEnd
+#### FrontEnd
 
 + HTML5
 + LESS
 + CoffeeScript
 
-### Backend
+#### Backend
 
-Markdown
-Node.js
++ Markdown
++ Node.js
+
 
