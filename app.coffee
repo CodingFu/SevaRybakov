@@ -2,18 +2,19 @@ util = require 'util'
 fs = require 'fs'
 http = require 'http'
 
-
 responder = (req, res) ->
     
   # Doing some routing
   url = 
-    switch req.url
-      when '/' then '/index.html' 
-      else req.url 
+    if req.url == '/'
+      '/index.html' 
+    else if req.url == '/posts/latest'
+      '/posts/hello.md'
+    else req.url 
   
   # Guessing Content-type
   head = {}
-  head['Content-Type'] =
+  head['Content-Type'] = (
     if /.*\.html/.test url
       'text/html'
     else if /.*\.css/.test url
@@ -22,6 +23,7 @@ responder = (req, res) ->
       'text/javascript'
     else
       'text/plain'
+  )+ '; charset=utf-8'
   
   # Trying to read body
   body = ''

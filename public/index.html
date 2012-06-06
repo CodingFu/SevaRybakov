@@ -8,5 +8,28 @@
         <header>
             Seva <i>Rybakov</i>
         </header>
+        <section id="content">
+            
+        </section>
+        <!--Templates-->
+        <script id="post-template" type="text/x-handlebars-template">
+          <article>
+            {{text}}
+          </article>
+        </script>
+        <script src="js/vendor/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/vendor/handlebars.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/vendor/showdown.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+            var converter = new Showdown.converter();
+            
+            var postTemplate = Handlebars.compile(
+                    $('#post-template').html()
+                );
+            $.get('/posts/latest', function(text) {
+                var postHtml = converter.makeHtml(text);
+                $('#content').html(postHtml);
+            });
+        </script>
     </div>
 </body>
