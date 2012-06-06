@@ -33,6 +33,6 @@ responder = (req, res) ->
   res.end body
 
 server = http.createServer(responder)
-             .listen port = 80
+             .listen port = process.env.port || 3000
 
-util.log "Server is running at port #{port}"
+util.puts "running on port #{port}"
