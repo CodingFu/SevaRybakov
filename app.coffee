@@ -2,7 +2,15 @@ util = require 'util'
 fs = require 'fs'
 http = require 'http'
 
+visits = 0
+
 responder = (req, res) ->
+  # Tracking visits
+  visits += 1 if req.url == '/'
+  
+  if req.url == '/visits'
+    res.writeHead 200, "Content-type" : "text/plain"
+    res.end "Visits: #{visits}"
     
   # Doing some routing
   url = 
