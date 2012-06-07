@@ -27,14 +27,14 @@
                     $('#post-template').html()
                 );
             
-            var autoRefresh = function() {
+            var render = function() {
                 $.get('/posts/latest', function(text) {
                     var postHtml = converter.makeHtml(text);
                     $('#content').html(postHtml);
                 });
             }
             
-            setInterval(autoRefresh, 300);
+            render();
         </script>
     </div>
 </body>
