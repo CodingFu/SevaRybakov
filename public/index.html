@@ -26,10 +26,15 @@
             var postTemplate = Handlebars.compile(
                     $('#post-template').html()
                 );
-            $.get('/posts/latest', function(text) {
-                var postHtml = converter.makeHtml(text);
-                $('#content').html(postHtml);
-            });
+            
+            var autoRefresh = function() {
+                $.get('/posts/latest', function(text) {
+                    var postHtml = converter.makeHtml(text);
+                    $('#content').html(postHtml);
+                });
+            }
+            
+            setInterval(autoRefresh, 300);
         </script>
     </div>
 </body>

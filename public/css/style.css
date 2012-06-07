@@ -110,7 +110,7 @@ body {
 }
 #container {
   width: 720px;
-  margin: 0 auto;
+  margin: 0 auto 96px auto;
 }
 header {
   padding: 96px 0 48px 0;

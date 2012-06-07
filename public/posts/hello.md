@@ -1,14 +1,40 @@
-Привет, мир!
-============
+Hey, cruel world!
+=================
 
-Это тест!
+Решил наконец-то обзавестись блогом. Все дело в том, что я совсем разучился излагать свои мысли. У меня нет привычки перечитывать написанное и поэтому я не могу даже нормально отправить блядский e-mail. Мне это надоело и я очень надеюсь, что эта штука поможет мне привести свою голову в порядок. Тем более, что у меня очень много идей, и по-любому нужно место, где я смогу о них рассказать (а заодно хорошо подумать о них в background, пока я пишу пост).
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Когда встает вопрос о дизайне, я могу сутки сидеть на [Dribbble](http://dribbble.com) и [Colour Lovers](http://colourlovers.com) в поисках вдохновения и так его и не найти. Поэтому я решил ограничить себя по-максимуму и сделать все ультра-минималистическим. В интернете стало слишком много шума, рекламы, кнопочек и другой ерунды, из-за которой стало просто невозможно прочитать средних размеров статью за один присест. Слава богу в Safari есть кнопочка Reader, которая помогает сосредоточиться на чтении и не отвлекаться на визуальный шум. Я не знаю, во что со временем превратится этот блог, но пока что на нем нет:
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- разделов
+- тегов
+- страницы со списком постов
+- сайдбара с облаком тегов с рекламой и прочей хуйней
+- комментариев
+- комментариев комментариев
+- комментариев комментариев комментариев
+- всего остального
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Я планирую добавлять на него визуальные элементы и функциональные части только тогда, когда почувствую в этом необходимость (а так как я ленивый, то я растяну это дело до последнего). Я все равно провозился с дизайном порядка четырех часов, и я знаю, что нужно написать еще пару килобайт CSS, чтобы все стало выглядеть более-менее прилично, но уже выглядит пиздато.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Так как я сам по себе программист, вовсе не удивительно, что я решил не регистрироваться на *Thumblr* или *Blogspot* или ставить себе *Wordpress*. Не люблю я, когда все уже сделано за меня, и не люблю излишнюю функциональность. Так что я решил написать свой велосипед. Итак, что у меня под капотом:
 
-**конец поста**
+### Backend
+
+- Node.JS. На Ruby on Rails блог писать совсем неинтересно.
+- <100 строчек Coffee-Script, который сервит файлы и мапит кое-какие запросы
+- Статьи хранятся в Markdown файлах
+- Все это дело хостится на Heroku
+
+
+### Front-end
+
+- HTML5
+- LESS
+- reset.less от Twitter Bootstrap *TODO: стырить у них еще и типографику*
+- zepto.js - lightweight-клон jQuery, не поддерживающий старые браузеры. - я вовсе не заинтересован, чтобы мой блог читали люди с IE6
+- HandleBars.js - lightweight-templating библиотека.
+- Showdown.js - парсер Markdown на CoffeeScript
+
+Сейчас в вашем браузере произошло следующее: сначала мой сервер отдал вам html, css и js. Потом браузер запросил markdown последнего поста, который я написал в TextEdit.app, распарсил его в html и отобразил ее. Таким образом, основная работа лежит на вашем браузере и мне не нужно напрягать сервер почем зря. Вот такие вот дела.
+
+*07.06.2012*
