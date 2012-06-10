@@ -16,6 +16,8 @@ responder = (req, res) ->
   url = 
     if req.url == '/'
       '/index.html' 
+    else if req.url == '/cv'
+      '/cv.html'
     else if req.url == '/posts/latest'
       '/posts/hello.md'
     else req.url 

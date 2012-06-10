@@ -1,0 +1,96 @@
+body {
+    color: #333;
+    margin-bottom: 96px;
+}
+header {
+    text-align: right;
+    color: #000;
+    padding-bottom: 96px;
+}
+
+section {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.0;
+}
+
+h2 {
+    font-size: 24px;
+    color: #aaa;
+    font-family: Inconsolata, Consolas, monospace;
+    font-weight: normal;
+}
+
+h3 {
+    border-bottom: #666 1px dotted;
+    color: #000;
+}
+
+h4 {
+    font-family: Inconsolata, Consolas, monospace;
+    font-weight: normal;
+    display: inline-block;
+    background: #FFF538;
+    color: #333;
+    padding: 0 10px;
+    margin: 30px 0 15px;
+}
+
+
+#contact-info {
+    padding: 96px 0 48px;
+    font-family: Inconsolata, Consolas, monospace;
+    font-size: 20px;
+}
+
+    #contact-info p {
+        margin: 0;
+    }
+
+#skills {
+    text-align: right;
+}
+
+#skills p {
+    font-family: Inconsolata, Consolas, monospace;
+    margin: 0;
+}
+
+span.stars {
+    padding-left: 40px;
+    font-size: 27px;
+    line-height: 1.0;
+    color: #aaa;
+}
+
+span.years {
+    padding-left: 36px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #aaa;
+}
+
+span.stars strong,
+span.years strong {
+    font-weight: normal;
+    color: #FF006F;
+}
+
+#hello {
+    font-family: Inconsolata, Consolas, monospace;
+}
+    
+#hello p:first-child {
+    margin: 0;
+}
+
+#education {
+    margin-top: 96px;
+}
+
+#education p {
+    margin: 0;
+}
